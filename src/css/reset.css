@@ -1,0 +1,11 @@
+/* o * (asterisco) significa que sera aplicado em todas as tag do Html*/
+* {
+    margin: 0; /*margem*/
+    padding: 0; /* margem/espacamento interno*/
+    box-sizing: border-box; /*facilita trabalhar com caixas*/
+}
+
+ul{
+    list-style: none;
+}
+
