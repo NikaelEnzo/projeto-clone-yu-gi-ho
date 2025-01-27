@@ -12,7 +12,7 @@ body {
 
 .cabecalho {
     display: flex;
-        /*display e como se ve a imagem, flex tem relações pai e filho */
+    /*display e como se ve a imagem, flex tem relações pai e filho */
     justify-content: center;
 }
 
@@ -26,19 +26,23 @@ body {
     flex-direction: column;
     padding: 12px;
     gap: 5px;
-    position: absolute; /*enppilhar cartas*/
+    position: absolute;
+    /*enppilhar cartas*/
 }
 
 .cartao.selecionado {
     opacity: 1;
-    z-index: 1; /*prioridade de posicionamento na pilha de cartas*/
+    z-index: 1;
+    /*prioridade de posicionamento na pilha de cartas*/
 }
 
 .lista-personagens {
     width: 300px;
     height: 500px;
     border-radius: 7px;
-    position: relative; /*define que os cartoes fiquem relativos em cima desse*/
+    position: relative;
+    /*define que os cartoes fiquem relativos em cima desse*/
+    padding: 12px;
 }
 
 .slider {
@@ -109,39 +113,47 @@ body {
     border-bottom: 1px solid #000;
     padding: 10px;
     max-height: 95px;
-    overflow-y: scroll; /*adiciona um scrol quando muito grande verticalmente*/
+    overflow-y: scroll;
+    /*adiciona um scrol quando muito grande verticalmente*/
     font-size: 13px;
 }
 
 .fundo-1 {
     background: url(../imgs/fundo-1.jpg);
+    border-radius: 7px;
 }
 
 .fundo-2 {
     background: url(../imgs/fundo-2.jpg);
+    border-radius: 7px;
 }
 
 .fundo-3 {
     background: url(../imgs/fundo-3.jpg);
+    border-radius: 7px;
 }
 
 .fundo-4 {
     background: url(../imgs/fundo-4.jpg);
+    border-radius: 7px;
 }
 
 .fundo-5 {
     background: url(../imgs/fundo-5.jpg);
+    border-radius: 7px;
 }
 
 .fundo-6 {
     background: url(../imgs/fundo-6.jpg);
+    border-radius: 7px;
 }
 
 .fundo-7 {
     background: url(../imgs/fundo-7.jpg);
+    border-radius: 7px;
 }
 
-.btn-seta{
+.btn-seta {
     background-color: #fff;
     width: 70px;
     height: 70px;
@@ -155,16 +167,16 @@ body {
     box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 25px -1px;
 }
 
-.btn-seta.btn-voltar{
+.btn-seta.btn-voltar {
     transform: rotateY(180deg);
 }
 
- /* hover, quando em cima muda a cor*/
-.btn-seta:hover{
+/* hover, quando em cima muda a cor*/
+.btn-seta:hover {
     background-color: #8351f3;
 }
 
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
     background-color: #c08057;
 }
 
@@ -179,4 +191,31 @@ body::-webkit-scrollbar-track{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #c08057;
+}
+
+.carta-virada {
+    display: none;
+}
+
+.carta-virada.mostrar-fundo-carta {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url(../imgs/fundo-carta.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    border-radius: 7px;
+    z-index: 2;
+}
+
+.cartao.virar {
+    transform: rotateZ(90deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.esconder {
+    display:none
 }
